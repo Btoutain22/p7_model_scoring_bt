@@ -32,17 +32,6 @@ row0_1.title('Analyse profile of your customer files')
 row0_2.subheader(
     'A Streamlit web app by Bernard TOUTAIN')
 
-# api_url = "https://interfacescoring.bernardtoutain.repl.co"
-
-# df = pd.read_csv('test_df.csv')
-# df.drop(['Unnamed: 0', 'TARGET'], axis=1, inplace=True)
-
-# info_client = pd.read_csv('info_client.csv')
-# info_client.drop(['Unnamed: 0'], axis=1, inplace=True)
-
-# df_DAYS_BIRTH = info_client[['DAYS_BIRTH', 'PROBABILITY_payment']].copy()
-# df_DAYS_BIRTH = df_DAYS_BIRTH.groupby(['DAYS_BIRTH']).mean()
-# df_DAYS_BIRTH = df_DAYS_BIRTH.reset_index()
 
 st.title('Credit application')
 
@@ -258,12 +247,6 @@ AMT_ANNUITY = ["until 10", "10_30", "30_50", "50_70", "70_90", "90_110", "110_13
 var6 = st.sidebar.selectbox('Choose AMT_ANNUITY', AMT_ANNUITY, help='Filter report to show only one hospital')
 st.write(f'AMT_ANNUITY:{var6}')
 
-#var1 = 0
-#var2 = '50_55'
-#var3 = '5_10'
-#var4 = '120_150'
-#var5 = 'over 500'
-#var6 = '10_30'
 
 info_client_f = info_client[(info_client['TARGET'] == var1) & (info_client['DAYS_BIRTH_Bin'] == var2) & \
                             (info_client['DAYS_EMPLOYED_Bin'] == var3) & (info_client['AMT_INCOME_TOTAL_Bin'] == var4) & \
